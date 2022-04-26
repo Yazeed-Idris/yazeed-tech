@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'yazeed-tech';
+
+  sendIdeaToEmail($event: MouseEvent) {
+    console.log('event', $event);
+  }
 }
