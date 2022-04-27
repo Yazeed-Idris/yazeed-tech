@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
+import { ParticlesConfig } from './particles-config';
+
+declare let particlesJS: any;
 
 @Component({
   selector: 'app-root',
@@ -23,6 +26,8 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
 
+    this.invokeParticles();
+
     let message = this.cookieService.get('stamp')
     if (message) {
       let check = this.checkIfHourPassed(message)
@@ -30,6 +35,10 @@ export class AppComponent implements OnInit{
         this.diableSend = true
       }
     }
+  }
+
+  public invokeParticles(): void {
+    particlesJS('particles-js', ParticlesConfig, function() {});
   }
 
   checkIfHourPassed(message: string) {
