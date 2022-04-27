@@ -12,16 +12,19 @@ declare let particlesJS: any;
 export class AppComponent implements OnInit{
   title = 'yazeed-tech';
   diableSend = false;
+  // @ts-ignore
+  ideaInputValue: string = '';
   constructor(
     private readonly cookieService: CookieService
   ) {
   }
 
   sendIdeaToEmail($event: MouseEvent) {
-    const todayDate = new Date();
-    let stupidEncrypt = todayDate.getDay()*3 + ',' + todayDate.getMonth()*5 + ',' + todayDate.getHours()*7
-    this.cookieService.set('stamp', stupidEncrypt);
-    console.log('event', $event);
+    // const todayDate = new Date();
+    // let stupidEncrypt = todayDate.getDay()*3 + ',' + todayDate.getMonth()*5 + ',' + todayDate.getHours()*7
+    // this.cookieService.set('stamp', stupidEncrypt);
+    // console.log('event', $event);
+    window.location.href = "mailto:yazeed.a.idris@gmail.com?subject=yazeed-tech-idea&body="+this.ideaInputValue;
   }
 
   ngOnInit(): void {
@@ -48,5 +51,9 @@ export class AppComponent implements OnInit{
     let hour = parseInt(messageArr[2])/7;
     let todayDate = new Date();
     return (todayDate.getDay() !== day || todayDate.getMonth() !== month || todayDate.getHours() !== hour);
+  }
+
+  getIdeaValue(value: string) {
+    this.ideaInputValue = value;
   }
 }

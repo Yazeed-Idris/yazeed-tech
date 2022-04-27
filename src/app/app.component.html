@@ -5,7 +5,7 @@
     <h1 class="text-primary">Welcome to my website</h1>
     <h2 class="text-secondary">It looks empty in hear :(</h2>
     <div class="input-group-lg input-group mb-3">
-      <input type="text" class="form-control" placeholder="any ideas?">
+      <input type="text" class="form-control" placeholder="any ideas?" name="ideaInput" (keyup)="getIdeaValue(ideaInput.value)" #ideaInput>
       <div class="input-group-append input-group-lg">
         <button (click)="sendIdeaToEmail($event)" [disabled]="diableSend" class="btn btn-primary" type="button">Send</button>
       </div>
