@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {CookieService} from "ngx-cookie-service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {CookieService} from "ngx-cookie-service";
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule
   ],
   providers: [
     CookieService

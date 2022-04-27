@@ -14,6 +14,7 @@ export class AppComponent implements OnInit{
   diableSend = false;
   // @ts-ignore
   ideaInputValue: string = '';
+  emptyText: string = '';
   constructor(
     private readonly cookieService: CookieService
   ) {
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit{
     // let stupidEncrypt = todayDate.getDay()*3 + ',' + todayDate.getMonth()*5 + ',' + todayDate.getHours()*7
     // this.cookieService.set('stamp', stupidEncrypt);
     // console.log('event', $event);
+    this.emptyText = '';
     window.location.href = "mailto:yazeed.a.idris@gmail.com?subject=yazeed-tech-idea&body="+this.ideaInputValue;
   }
 
