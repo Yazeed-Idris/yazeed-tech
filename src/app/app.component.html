@@ -7,7 +7,7 @@
     <div class="input-group-lg input-group mb-3">
       <input type="text" class="form-control" placeholder="any ideas?" name="ideaInput" [(ngModel)]="emptyText" (keyup)="getIdeaValue(ideaInput.value)" #ideaInput>
       <div class="input-group-append input-group-lg">
-        <button (click)="sendIdeaToEmail($event)" [disabled]="diableSend" class="btn btn-primary" type="button">Send</button>
+        <button (click)="sendIdeaToEmail($event)" [disabled]="diableSend || !ideaInput.value" class="btn btn-primary" type="button">Send</button>
       </div>
     </div>
   </div>
