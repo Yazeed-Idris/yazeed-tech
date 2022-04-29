@@ -1,15 +1,24 @@
-<div style="position: absolute; width: 100vw; height: 100vh;" id="particles-js"></div>
+<div style="position: absolute; width: 100vw; height: 100vh; z-index: 1" id="particles-js"></div>
 
-<div class="container d-flex align-items-center flex-column justify-content-center h-100 text-center">
-  <div style="background-color: white; z-index: 7">
-    <h1 class="text-primary">Welcome to my website</h1>
-    <h2 class="text-secondary">It looks empty in hear :(</h2>
-    <div class="input-group-lg input-group mb-3">
-      <input type="text" class="form-control" placeholder="any ideas?" name="ideaInput" [(ngModel)]="emptyText" (keyup)="getIdeaValue(ideaInput.value)" #ideaInput>
-      <div class="input-group-append input-group-lg">
-        <button (click)="sendIdeaToEmail($event)" [disabled]="diableSend || !ideaInput.value" class="btn btn-primary" type="button">Send</button>
+<div class="d-flex flex-column w-100">
+  <div class="w-100" style="z-index: 7">
+    <app-top-navbar style="z-index: 7"></app-top-navbar>
+  </div>
+</div>
+
+  <div class="container d-flex align-items-center flex-column justify-content-center h-100 text-center">
+    <div style="background-color: white; z-index: 7">
+      <h1 class="text-primary">Welcome to my website</h1>
+      <h2 class="text-secondary">It looks empty in hear :(</h2>
+      <div class="input-group-lg input-group mb-3">
+        <input type="text" class="form-control" placeholder="any ideas?" name="ideaInput" [(ngModel)]="emptyText"
+               (keyup)="getIdeaValue(ideaInput.value)" #ideaInput>
+        <div class="input-group-append input-group-lg">
+          <button (click)="sendIdeaToEmail($event)" [disabled]="diableSend || !ideaInput.value" class="btn btn-primary"
+                  type="button">Send
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 

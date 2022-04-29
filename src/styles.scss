@@ -1,7 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
+$primary: #37BEB0;
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.btn-primary, .btn-primary:active, .btn-primary:visited, .btn-primary:disabled {
+  background-color: #37BEB0;
+  color: #DBF5F0;
+}
+
+.btn-primary:hover {
+  background-color: #0C6170;
+  color: #DBF5F0;
+}
 
 @font-face {
   font-family: "Poppins";
