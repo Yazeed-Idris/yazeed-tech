@@ -6,13 +6,13 @@ $primary: #37BEB0;
 @import '~bootstrap/scss/bootstrap';
 
 .btn-primary, .btn-primary:active, .btn-primary:visited, .btn-primary:disabled {
-  background-color: #37BEB0;
-  color: #DBF5F0;
+  background-color: #37BEB0 !important;
+  color: #DBF5F0 !important;
 }
 
 .btn-primary:hover {
-  background-color: #0C6170;
-  color: #DBF5F0;
+  background-color: #0C6170 !important;
+  color: #DBF5F0 !important;
 }
 
 @font-face {

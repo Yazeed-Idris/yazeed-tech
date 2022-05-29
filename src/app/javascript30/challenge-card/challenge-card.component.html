@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center mb-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{challengeData.imageUrl}}" alt="image description">
+    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+      <div class="d-flex flex-column justify-content-between align-content-between h-100">
+        <div>
+          <h5 class="card-title">{{challengeData.title}}</h5>
+          <p class="card-text">{{challengeData.description}}</p>
+        </div>
+        <div>
+          <button (click)="showChallenge()" class="btn btn-primary">View Challenge</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

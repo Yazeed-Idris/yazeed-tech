@@ -1,1 +1,19 @@
-<p>javascript30-home works!</p>
+<div class="container text-center">
+  <h1 class="text-primary text-center">JavaScript30</h1>
+  <p class="text-secondary text-center text-justify mb-0">JavaScript30 is a set of 30 challenges done in 30 days. The
+    reason I chose to do
+    these
+    challenges is because it takes less than half an hour to do one of them, which makes it less overwhelming than other
+    tutorials and courses online.</p>
+  <p class="text-secondary text-center text-justify">If you want to do them yourself, you can search JavaScript30 on
+    google, or click
+    the link <a href="https://javascript30.com/">JavaScript30</a></p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3" *ngFor="let challengeData of challengesData; let i = index">
+        <app-challenge-card [challengeData]="challengeData"></app-challenge-card>
+      </div>
+    </div>
+  </div>
+</div>
