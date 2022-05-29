@@ -3,13 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import {AboutComponent} from "./about/about.component";
 import {SuggestionsComponent} from "./suggestions/suggestions.component";
 import {ContactComponent} from "./contact/contact.component";
+import {ProjectsComponent} from "./projects/projects.component";
 
 const routes: Routes = [
+  {path: '', component: AboutComponent},
   {path: 'javascript30', loadChildren: () => import('./javascript30/javascript30.module').then(m => m.Javascript30Module)},
   {path: 'about', component: AboutComponent},
+  {path: 'projects', component: ProjectsComponent},
   {path: 'suggestions', component: SuggestionsComponent},
   {path: 'contact', component: ContactComponent},
-  // {path: '**', redirectTo: '/about'},
+  {path: '**', redirectTo: ''},
 ];
 
 @NgModule({
