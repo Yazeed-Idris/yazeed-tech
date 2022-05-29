@@ -9,7 +9,7 @@ declare let particlesJS: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'yazeed-tech';
   diableSend = false;
   // @ts-ignore
@@ -17,8 +17,7 @@ export class AppComponent implements OnInit{
   emptyText: string = '';
   constructor(
     private readonly cookieService: CookieService
-  ) {
-  }
+  ) {}
 
   sendIdeaToEmail($event: MouseEvent) {
     // const todayDate = new Date();
@@ -31,15 +30,15 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.invokeParticles();
+    // this.invokeParticles();
 
-    let message = this.cookieService.get('stamp')
-    if (message) {
-      let check = this.checkIfHourPassed(message)
-      if (!check) {
-        this.diableSend = true
-      }
-    }
+    // let message = this.cookieService.get('stamp')
+    // if (message) {
+    //   let check = this.checkIfHourPassed(message)
+    //   if (!check) {
+    //     this.diableSend = true
+    //   }
+    // }
   }
 
   public invokeParticles(): void {

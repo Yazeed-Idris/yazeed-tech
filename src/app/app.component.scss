@@ -1,0 +1,24 @@
+.yazz-box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+
+
+.yazz-box .yazz-row.yazz-header {
+  flex: 0 1 auto;
+  /* The above is short for:
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+   */
+}
+
+.yazz-box .yazz-row.yazz-content {
+  flex: 1 1 auto;
+}
+
+//.box .row.footer {
+//  flex: 0 1 40px;
+//}
