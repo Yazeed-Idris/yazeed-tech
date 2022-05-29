@@ -12,8 +12,7 @@ export class ChallengeCardComponent implements OnInit {
     title: 'no title',
     description: 'no description',
     imageUrl: '/assets/Images/no-image.png',
-    folderName: '',
-    pageName: '',
+    link: 'https://yazeed-idris.github.io/',
   };
 
   constructor() {
@@ -24,6 +23,6 @@ export class ChallengeCardComponent implements OnInit {
 
   showChallenge() {
     // todo: show challenge page
-    window.location.href ='/src/htmlPages/' + this.challengeData.folderName + '/' + this.challengeData.pageName;
+    window.location.href = this.challengeData.link;
   }
 }
