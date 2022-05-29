@@ -13,7 +13,7 @@ import { TopNavbarComponent } from './top-navbar/top-navbar.component';
   declarations: [
     AppComponent,
     ProjectDisplayComponent,
-    TopNavbarComponent
+    TopNavbarComponent,
   ],
   imports: [
     BrowserModule,
