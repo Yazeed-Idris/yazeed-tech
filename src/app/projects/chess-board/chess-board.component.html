@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+  <div class="border-3 border border-dark" cdkDropListGroup>
+    <div *ngFor="let row of board; let i = index" style="height: 100px; width: 100%" class="d-flex">
+      <div *ngFor="let col of row; let j = index"
+           [ngClass]="{'bg-success': ((i%2 === 0 && j%2 === 0) || (i%2 !== 0 && j%2 !== 0))}"
+           style="height: 100px; width: 100px" class="d-flex justify-content-center align-items-center"
+           (cdkDropListDropped)="pieceMoved($event)" cdkDropList [cdkDropListData]="pieces[i]">
+        <div cdkDrag [cdkDragData]="pieces[i][j]" class="m-2" *ngIf="i === 0 && j === 0">
+          <img src="assets/Images/black_queen.png" class="img-fluid" alt="chess black queen">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

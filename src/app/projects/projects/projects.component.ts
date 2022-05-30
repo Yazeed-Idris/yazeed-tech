@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-projects',
@@ -10,12 +10,13 @@ export class ProjectsComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
   }
 
-  viewJavascript30() {
-    this.router.navigate(['/javascript30']);
+  goToProject(path: string) {
+    this.router.navigate([path], {relativeTo: this.route});
   }
 }
