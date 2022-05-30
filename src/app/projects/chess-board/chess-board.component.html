@@ -4,8 +4,8 @@
       <div *ngFor="let col of row; let j = index"
            [ngClass]="{'bg-success': ((i%2 === 0 && j%2 === 0) || (i%2 !== 0 && j%2 !== 0))}"
            style="height: 100px; width: 100px" class="d-flex justify-content-center align-items-center"
-           (cdkDropListDropped)="pieceMoved($event)" cdkDropList [cdkDropListData]="pieces[i]">
-        <div cdkDrag [cdkDragData]="pieces[i][j]" class="m-2" *ngIf="i === 0 && j === 0">
+           (cdkDropListDropped)="pieceMoved($event)" cdkDropList [cdkDropListData]="board[i][j]">
+        <div cdkDrag [cdkDragData]="piece" class="m-2" *ngFor="let piece of board[i][j]">
           <img src="assets/Images/black_queen.png" class="img-fluid" alt="chess black queen">
         </div>
       </div>

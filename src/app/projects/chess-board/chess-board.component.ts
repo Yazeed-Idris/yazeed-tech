@@ -9,33 +9,39 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag
 export class ChessBoardComponent implements OnInit {
 
   boardSize: number = 8;
-  board: number[][] = [];
+  board: any[][] = [];
   pieces: any[] =[]
+
 
   constructor() {
     for (let i = 0; i < this.boardSize; i++) {
       this.board.push([]);
-      this.pieces.push([]);
       for (let j = 0; j < this.boardSize; j++) {
-        this.board[i].push(i);
-        if (i%2 == 0) {
-          if (j%2 == 0) {
-            this.pieces[i].push(1);
-          } else {
-            this.pieces[i].push(0);
-          }
-        }
+        this.board[i].push([]);
       }
     }
-    console.table(this.board);
+
+    this.initializeBoard()
   }
 
   ngOnInit(): void {
   }
 
-  pieceMoved($event: CdkDragDrop<number[]>) {
-    // transferArrayItem($event.previousContainer.data, $event.container.data, $event.previousIndex, $event.currentIndex);
-    console.log('event', $event);
+  pieceMoved($event: CdkDragDrop<number[][]>) {
+    if ($event.previousContainer === $event.container) {
+      moveItemInArray($event.container.data, $event.previousIndex, $event.currentIndex);
+    } else {
+      transferArrayItem(
+        $event.previousContainer.data,
+        $event.container.data,
+        $event.previousIndex,
+        $event.currentIndex,
+      );
+    }
 
+  }
+
+  private initializeBoard() {
+    this.board[0][0].push(1);
   }
 }
