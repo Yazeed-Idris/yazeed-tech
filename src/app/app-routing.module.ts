@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)},
   {path: 'suggestions', component: SuggestionsComponent},
   {path: 'contact', component: ContactComponent},
-  // {path: '**', redirectTo: ''},
+  {path: '**', redirectTo: ''},
 ];
 
 @NgModule({
