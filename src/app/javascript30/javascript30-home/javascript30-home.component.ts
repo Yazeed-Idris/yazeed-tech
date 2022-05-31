@@ -22,10 +22,10 @@ export class Javascript30HomeComponent implements OnInit {
       link: 'https://yazeed-idris.github.io/JS-and-CSS-Clock/',
     },
     {
-      title: 'no title',
-      description: 'no description',
-      imageUrl: '/assets/Images/no-image.png',
-      link: 'https://yazeed-idris.github.io/',
+      title: 'CSS Variables',
+      description: 'In this challenge, I was tasked to update the image styling based on the CSS variables in the stylesheet.',
+      imageUrl: '/assets/Images/css-variables.jpg',
+      link: 'https://yazeed-idris.github.io/CSS-Variables/',
     }
   ]
 
