@@ -11,8 +11,8 @@
 <!--  </div>-->
 <!--</div>-->
 <div class="d-flex justify-content-center align-items-center h-100 body">
-  <div class="wrap">
-    <a routerLinkActive="active" routerLink="about">
+  <div class="wrap" #navigationWrapper>
+    <a routerLinkActive="active" routerLink="about" (click)="shrinkNavigation()">
       <div class="d-flex justify-content-center align-items-center">
         <h1 class="text-white">About</h1>
       </div>

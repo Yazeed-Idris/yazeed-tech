@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
 import { ParticlesConfig } from './particles-config';
 
@@ -15,6 +15,9 @@ export class AppComponent implements OnInit {
   // @ts-ignore
   ideaInputValue: string = '';
   emptyText: string = '';
+
+  // @ViewChild('navigationWrapper', ) navigationWrapper: ElementRef;
+
   constructor(
     private readonly cookieService: CookieService
   ) {}
@@ -56,5 +59,9 @@ export class AppComponent implements OnInit {
 
   getIdeaValue(value: string) {
     this.ideaInputValue = value;
+  }
+
+  shrinkNavigation() {
+
   }
 }
