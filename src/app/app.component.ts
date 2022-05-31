@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
 import { ParticlesConfig } from './particles-config';
+import {NavigationEnd, Router} from "@angular/router";
 
 declare let particlesJS: any;
 
@@ -16,10 +17,11 @@ export class AppComponent implements OnInit {
   ideaInputValue: string = '';
   emptyText: string = '';
 
-  // @ViewChild('navigationWrapper', ) navigationWrapper: ElementRef;
+  @ViewChild('navigationWrapper') navigationWrapper: ElementRef;
 
   constructor(
-    private readonly cookieService: CookieService
+    private readonly cookieService: CookieService,
+    private router: Router
   ) {}
 
   sendIdeaToEmail($event: MouseEvent) {
@@ -32,29 +34,21 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    // this.invokeParticles();
-
-    // let message = this.cookieService.get('stamp')
-    // if (message) {
-    //   let check = this.checkIfHourPassed(message)
-    //   if (!check) {
-    //     this.diableSend = true
-    //   }
-    // }
+    this.router.events.subscribe(
+      (event) => {
+        if (event instanceof NavigationEnd) {
+          if (event.url === '/') {
+            this.unshrinkNavigation();
+          } else {
+            this.shrinkNavigation();
+          }
+        }
+      }
+    )
   }
 
   public invokeParticles(): void {
     particlesJS('particles-js', ParticlesConfig, function() {});
-  }
-
-  checkIfHourPassed(message: string) {
-    let messageArr = message.split(',');
-    let day = parseInt(messageArr[0])/3;
-    let month = parseInt(messageArr[1])/5;
-    let hour = parseInt(messageArr[2])/7;
-    let todayDate = new Date();
-    return (todayDate.getDay() !== day || todayDate.getMonth() !== month || todayDate.getHours() !== hour);
   }
 
   getIdeaValue(value: string) {
@@ -62,6 +56,11 @@ export class AppComponent implements OnInit {
   }
 
   shrinkNavigation() {
+    console.log('navigationWrapper', this.navigationWrapper);
+    this.navigationWrapper.nativeElement.classList.add('shrink');
+  }
 
+  unshrinkNavigation() {
+    this.navigationWrapper.nativeElement.classList.remove('shrink');
   }
 }
