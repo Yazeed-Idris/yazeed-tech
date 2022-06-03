@@ -26,6 +26,12 @@ export class Javascript30HomeComponent implements OnInit {
       description: 'In this challenge, I was tasked to update the image styling based on the CSS variables in the stylesheet.',
       imageUrl: '/assets/Images/css-variables.jpg',
       link: 'https://yazeed-idris.github.io/CSS-Variables/',
+    },
+    {
+      title: 'Flex Panel Gallery',
+      description: 'In this challenge I used the flex display property with transitions that take affect when the user clicks on one of the images.',
+      imageUrl: '/assets/Images/challenge-5.jpg',
+      link: 'https://yazeed-idris.github.io/Flex-Panel-Gallery/',
     }
   ]
 
