@@ -2,3 +2,10 @@
   height: 100%;
   width: 100%;
 }
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drop-list-dragging > * {
+  opacity: 0;
+}
