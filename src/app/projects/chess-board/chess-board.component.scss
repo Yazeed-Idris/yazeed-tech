@@ -2,10 +2,15 @@
   height: 100%;
   width: 100%;
 }
-.cdk-drag-placeholder {
-  opacity: 0;
+//.cdk-drag-placeholder {
+//  opacity: 0;
+//}
+
+.cdk-drop-list-dragging {
+  background-color: red !important;
 }
 
-.cdk-drop-list-dragging > * {
+.cdk-drop-list-dragging > *:first-child {
+  display: none;
   opacity: 0;
 }
