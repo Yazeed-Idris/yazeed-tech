@@ -10,6 +10,7 @@ import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 import { AboutComponent } from './about/about.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
 import { ContactComponent } from './contact/contact.component';
+import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    MdbCarouselModule
   ],
   providers: [
     CookieService
