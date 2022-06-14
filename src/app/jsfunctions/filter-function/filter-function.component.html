@@ -1,1 +1,2 @@
-<h1>const {{result}} = [<input type="text" [(ngModel)]="input">].filter((el) => condition)</h1>
+<h1>const [{{result}}] = [<input type="text" (input)="arrayChanged($event)" [(ngModel)]="input">].filter(<input
+  type="text" [(ngModel)]="inputFunction" (input)="functionChanged($event)">)</h1>
