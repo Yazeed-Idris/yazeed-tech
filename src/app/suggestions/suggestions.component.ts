@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BackendService} from "../../core/services/backend.service";
 
 @Component({
   selector: 'app-suggestions',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuggestionsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly backendService: BackendService) { }
 
   ngOnInit(): void {
+    this.backendService.getHello();
   }
 
 }

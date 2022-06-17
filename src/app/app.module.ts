@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
 import { ContactComponent } from './contact/contact.component';
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    MdbCarouselModule
+    MdbCarouselModule,
+    HttpClientModule
   ],
   providers: [
     CookieService
