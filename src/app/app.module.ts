@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {CookieService} from "ngx-cookie-service";
 import {FormsModule} from "@angular/forms";
-import { TopNavbarComponent } from './top-navbar/top-navbar.component';
-import { AboutComponent } from './about/about.component';
-import { SuggestionsComponent } from './suggestions/suggestions.component';
-import { ContactComponent } from './contact/contact.component';
+import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
+import { AboutComponent } from './components/about/about.component';
+import { SuggestionsComponent } from './components/suggestions/suggestions.component';
+import { ContactComponent } from './components/contact/contact.component';
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 import {HttpClientModule} from "@angular/common/http";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {HttpClientModule} from "@angular/common/http";
     NgbModule,
     FormsModule,
     MdbCarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
   ],
   providers: [
     CookieService

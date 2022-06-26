@@ -5,6 +5,7 @@ import { JSFunctionsRoutingModule } from './jsfunctions-routing.module';
 import { JSFunctionsHomeComponent } from './jsfunctions-home/jsfunctions-home.component';
 import { FilterFunctionComponent } from './filter-function/filter-function.component';
 import {FormsModule} from "@angular/forms";
+import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {FormsModule} from "@angular/forms";
   imports: [
     CommonModule,
     JSFunctionsRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
   ]
 })
 export class JSFunctionsModule { }

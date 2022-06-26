@@ -5,6 +5,7 @@ import { Javascript30RoutingModule } from './javascript30-routing.module';
 import { Javascript30HomeComponent } from './javascript30-home/javascript30-home.component';
 import { ChallengeCardComponent } from './challenge-card/challenge-card.component';
 import { ShowChallengeComponent } from './show-challenge/show-challenge.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ShowChallengeComponent } from './show-challenge/show-challenge.componen
   ],
   imports: [
     CommonModule,
-    Javascript30RoutingModule
+    Javascript30RoutingModule,
+    SharedModule,
   ]
 })
 export class Javascript30Module { }

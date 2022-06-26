@@ -6,6 +6,7 @@ import {ProjectsComponent} from "./projects/projects.component";
 import { ChessBoardComponent } from './chess-board/chess-board.component';
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import { ChessPieceComponent } from './chess-board/chess-piece/chess-piece.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ChessPieceComponent } from './chess-board/chess-piece/chess-piece.compo
     CommonModule,
     ProjectsRoutingModule,
     DragDropModule,
+    SharedModule,
   ]
 })
 export class ProjectsModule { }
