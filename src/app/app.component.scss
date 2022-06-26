@@ -6,9 +6,11 @@
   background-color: #0C6170;
 }
 
+$navigation-size: 80vmin;
+
 .wrap{
   position:fixed;
-  width:80vmin; height:80vmin;
+  width:$navigation-size; height:$navigation-size;
   //margin:0 auto;
   background: transparent;
   transform:scale(.8) translateZ(0px);
@@ -18,8 +20,8 @@
 
 .wrap.shrink {
   transform:scale(.2);
-  margin-top: -80vmin;
-  margin-left: -185vmin;
+  margin-left: calc(-100vw + 0.2*$navigation-size + 20px);
+  margin-top: calc(-100vh + 0.2*$navigation-size + 20px);
 }
 
 .wrap a {

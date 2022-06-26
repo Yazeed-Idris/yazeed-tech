@@ -11,10 +11,10 @@ export class BackendService {
   constructor(private readonly http: HttpClient) { }
 
   getHello() {
-    console.log(this.http.get<string>(environment.url).subscribe(
-      data => {
-        console.log(data);
-      }
-    ));
+    // console.log(this.http.get<string>(environment.url).subscribe(
+    //   data => {
+    //     console.log(data);
+    //   }
+    // ));
   }
 }
