@@ -2,20 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ParagraphDisplayComponent } from './paragraph-display/paragraph-display.component';
 import { DataContainerComponent } from './data-container/data-container.component';
+import { FormComponent } from './form/form.component';
+import {FormsModule} from "@angular/forms";
 
 
 
 @NgModule({
   declarations: [
     ParagraphDisplayComponent,
-    DataContainerComponent
+    DataContainerComponent,
+    FormComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
-    exports: [
-        ParagraphDisplayComponent,
-        DataContainerComponent,
-    ]
+  exports: [
+    ParagraphDisplayComponent,
+    DataContainerComponent,
+    FormComponent,
+  ]
 })
 export class SharedModule { }
