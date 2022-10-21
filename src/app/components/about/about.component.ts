@@ -32,18 +32,18 @@ export class AboutComponent implements OnInit {
       {
         imgUrl: 'assets/Images/Tanseeq/2.jpg',
       },
-      {
-        imgUrl: 'assets/Images/Tanseeq/3.jpg',
-      },
-      {
-        imgUrl: 'assets/Images/Tanseeq/4.jpg',
-      },
-      {
-        imgUrl: 'assets/Images/Tanseeq/5.jpg',
-      },
-      {
-        imgUrl: 'assets/Images/Tanseeq/6.jpg',
-      },
+      // {
+      //   imgUrl: 'assets/Images/Tanseeq/3.jpg',
+      // },
+      // {
+      //   imgUrl: 'assets/Images/Tanseeq/4.jpg',
+      // },
+      // {
+      //   imgUrl: 'assets/Images/Tanseeq/5.jpg',
+      // },
+      // {
+      //   imgUrl: 'assets/Images/Tanseeq/6.jpg',
+      // },
       {
         imgUrl: 'assets/Images/Tanseeq/7.jpg',
       },
